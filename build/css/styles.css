@@ -1,0 +1,241 @@
+
+:root{
+
+    /*  COLORES */
+    --secondColor:#094067;
+    --background:#fffffe;
+    --paragraph:#5f6c7b;
+    --detalles:#ef4565;
+
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background: var(--background);
+}
+
+body::-webkit-scrollbar-track{  
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #0d6efd;
+    border-radius: 50px;
+    border-right: 2px solid #0d6efd; 
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #0d6efd;
+}
+::selection {
+    background:#094067;
+    color: #FFF;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory ;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+h1, h2, h3{
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+h1{
+    font-size: 3.8rem;
+
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-weight: 800 !important;
+}
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 5.5rem;
+    }
+}
+@media (min-width: 992px) {
+
+    h2{
+        font-size: 8rem;
+    }
+}
+@media (min-width: 1400px) {
+
+    h2{
+        font-size: 10rem;
+    }
+}
+
+
+.fs-0{
+    font-size: 3.5rem !important;
+}
+
+.text-blue{
+    color:var(--secondColor) !important; 
+    
+}
+
+.photo-perfil{
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .photo-perfil{
+      width: 100%;
+    }
+    .viewport{
+        height: 100vh;
+    }
+}
+u{
+    text-decoration-color: #0d6efd;
+}
+[id] {
+    scroll-margin-top: 5em;
+ }
+
+.bg-second{
+    background-color: var(--secondColor);
+}
+/* Sroll snap*/
+@media (min-width: 768px) {
+    #inicio, #sobremi, #habilidades, #portafolio, #contacto, #footer{
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        scroll-margin-top: 10em;
+    }
+}
+
+.categoria img{
+    transition-property: transform;
+    transition-duration: 600ms;
+}
+.categoria img:hover{
+    transform: scale(1.8);
+}
+
+
+/*
+    Auther: Abdelrhman Said
+*/
+
+
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff !important;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  color: #000;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before
+ {
+  background-color: #3b5999;
+  color: #ffffff !important;
+}
+.wrapper .facebook:hover a{
+    color: #ffffff !important;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff !important;
+}
+.wrapper .twitter:hover a{
+    color: #ffffff !important;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff !important;
+}
+.wrapper .instagram:hover a{
+    color: #ffffff !important;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff !important;
+}
+.wrapper .github:hover a{
+    color: #ffffff !important;
+}
+
