@@ -101,6 +101,9 @@ h3{
     .viewport{
         height: 100vh;
     }
+    .ta-j{
+        text-align: justify;
+    }
 }
 u{
     text-decoration-color: #0d6efd;
