@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb:active {
 
 html{
     font-size: 62.5%;
-    scroll-snap-type: y mandatory ;
+    /* scroll-snap-type: y mandatory ; */
 }
 
 body{
@@ -116,13 +116,13 @@ u{
     background-color: var(--secondColor);
 }
 /* Sroll snap*/
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     #inicio, #sobremi, #habilidades, #portafolio, #contacto, #footer{
         scroll-snap-align: center;
         scroll-snap-stop: always;
         scroll-margin-top: 10em;
     }
-}
+} */
 
 .categoria img{
     transition-property: transform;
